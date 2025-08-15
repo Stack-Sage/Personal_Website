@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export', // enables static export
   images: {
+    unoptimized:true,
     domains: ['images.unsplash.com'], // add any external image domains you use
   },
 };

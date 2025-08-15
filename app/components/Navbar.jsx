@@ -15,7 +15,7 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <header className="w-full fixed z-20 bg-transparent   shadow-lg  ">
+    <header className="w-full fixed z-50 bg-transparent   shadow-lg  ">
       <div className="w-fit hover:scale-[1.02] transition-transform duration-300 mx-auto px-10 py-3 flex items-center justify-between">
 
         <Menu setActive={setActive}>
