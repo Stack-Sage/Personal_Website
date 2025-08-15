@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "checkJs": false,      // Important: don't check JS types
+    "typeRoots": ["./types"] // Look here for custom types
+  },
+  "exclude": ["node_modules"]
 }
