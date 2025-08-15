@@ -23,7 +23,7 @@ const Navbar = () => {
             <ProductItem
               title="Welcome Home"
               description="Explore the latest content."
-              href="/home"            
+              href="/"            
               src="/images/me_crop.png"
             />
           </MenuItem>
