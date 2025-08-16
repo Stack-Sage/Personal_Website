@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import Link from "next/link";
 
 const Navbar = () => {
   const [active, setActive] = useState(null);
@@ -11,50 +11,27 @@ const Navbar = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-
   if (!mounted) return null;
 
   return (
-    <header className="w-full fixed z-50 bg-transparent   shadow-lg  ">
-      <div className="w-fit hover:scale-[1.02] transition-transform duration-300 mx-auto px-10 py-3 flex items-center justify-between">
-
-        <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Home">
-            <ProductItem
-              title="Welcome Home"
-              description="Explore the latest content."
-              href="/"            
-              src="/images/me_crop.png"
-            />
-          </MenuItem>
-
-          <MenuItem setActive={setActive} active={active} item="Work">
-            <ProductItem
-              title="Our Projects"
-              description="See our amazing work."
-              href="/samples"          // ✅ must pass href here
-              src="/images/stack.png"
-            />
-          </MenuItem>
-
-          <MenuItem setActive={setActive} active={active} item="Services">
-            <ProductItem
-              title="Our Services"
-              description="Explore what we offer."
-              href="/services"         // ✅ must pass href here
-              src="/images/services.webp"
-            />
-          </MenuItem>
-
-          <MenuItem setActive={setActive} active={active} item="Contact">
-            <ProductItem
-              title="Get in Touch"
-              description="We'd love to hear from you."
-              href="/contact"          // ✅ must pass href here
-              src="/images/contact.webp"
-            />
-          </MenuItem>
-        </Menu>
+    <header className="w-full fixed z-50 bg-transparent">
+      <div className="w-fit hover:scale-[1.02] transition-transform duration-300 mx-auto px-2 py-3 flex items-center justify-between">
+        
+        {/* Nav Items */}
+        <nav className="flex lg:gap-16 gap-4 md:gap:10 lg:space-x-5 bg-gradient-to-bl from-indigo-400 via-cyan-200 to-indigo-400 dark:bg-gradient-to-bl dark:from-indigo-950 dark:via-black dark:to-indigo-900 ring-1 ring-indigo-900 dark:text-indigo-200 left text:md font-bold lg:text-lg   px-10 py-2 rounded-full text-indigo-900  ">
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-indigo-400  transition-colors">
+            Home
+          </Link>
+          <Link href="/samples" className="hover:text-blue-600 dark:hover:text-indigo-400  transition-colors">
+            Work
+          </Link>
+          <Link href="/services" className="dark:hover:text-indigo-400   hover:text-blue-600 transition-colors">
+            Services
+          </Link>
+          <Link href="/contact" className="hover:text-blue-600 dark:hover:text-indigo-400  transition-colors">
+            Contact
+          </Link>
+        </nav>
 
         {/* Theme Toggle */}
         <button
@@ -64,7 +41,6 @@ const Navbar = () => {
         >
           {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
         </button>
-
       </div>
     </header>
   );

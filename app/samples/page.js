@@ -8,7 +8,7 @@ const Samples = ()=>{
       <>
      
       <div className=" w-screen h-full  overflow-x-hidden min-h-screen
-      bg-gradient-to-br pt-[100px] from-black via-slate-950 to-black">
+      dark:bg-gradient-to-br pt-[100px] dark:from-black dark:via-slate-950 dark:to-black">
 
 
          

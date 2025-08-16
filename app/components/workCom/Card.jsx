@@ -69,13 +69,13 @@ const Card = () => {
       <BackgroundBeamsWithCollision>
         <div className="flex h-full justify-center flex-col items-center  p-10  ">
           {/* Header */}
-          <div className="fixed backdrop-blur-3xl top-20 z-10 w-full px-20 py-2 bg-transparent  flex flex-col lg:flex-row md:flex-row justify-around items-center gap-4  ">
-            <h1 className="text-neutral-200 text-2xl lg:text-3xl font-bold text-center">
+          <div className="fixed top-20 z-10 w-full px-20 py-2  flex flex-col lg:flex-row md:flex-row justify-around items-center gap-4  ">
+            <h1 className="theme-text dark:text-neutral-200 text-2xl lg:text-3xl font-bold text-center">
               Featured Projects
             </h1>
 
-            <div className="flex items-center gap-2 z-50 relative w-full md:w-auto">
-              <label className="text-neutral-300 text-base lg:text-lg">
+            <div className="flex items-center gap-2 z-50 relative w-full md:w-auto theme-text">
+              <label className="dark:text-neutral-300 text-base lg:text-lg">
                 Filter By Tech:
               </label>
               <Select
@@ -85,17 +85,17 @@ const Card = () => {
                 options={options}
                 isSearchable = {false}
                 styles={customStyles}
-                className="w-48"
+                className="w-48 outline "
               />
             </div>
           </div>
 
           {/* Project Cards */}
-          <div className="lg:grid z-0  mt-10 lg:mt-24 md:mt-14 lg:gap-y-10 h-full lg:gap-x-20 lg:grid-cols-2  ">
+          <div className="lg:grid z-0  mt-10 lg:mt-24 md:mt-14 lg:gap-y-10 h-full lg:gap-x-20 lg:grid-cols-2    ">
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="flex ring-1 ring-neutral-500 hover:ring-neutral-400 shadow-md shadow-neutral-700 rounded-lg bg-white dark:bg-gradient-to-br from-black via-slate-950 to-black hover:shadow-lg transition-transform duration-300 ease-in-out  mb-0 lg:mb-10 md:mb-10 md:max-w-xl md:flex-row flex-col lg:hover:scale-100 md:hover:scale-95 lg:scale-95 hover:sm:scale-[0.8] scale-[0.75] hover:scale-[0.8] md:scale-[0.85]  "
+                className="flex lg:scale-90 theme-card  shadow-md shadow-neutral-700 rounded-lg bg-white dark:bg-gradient-to-br from-black via-slate-950 to-black hover:shadow-lg transition-transform duration-300 ease-in-out  mb-0 lg:mb-10 md:mb-10 md:max-w-xl md:flex-row flex-col     scale-[0.75]  md:scale-[0.85]  "
               >
                 <img
                   className="h-96 max-sm:h-48 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
@@ -112,13 +112,14 @@ const Card = () => {
                   <p className="text-sm text-neutral-500 dark:text-neutral-300">
                     {project.techUsed.join(" | ")}
                   </p>
-                  <div className="flex flex-col md:flex-row lg:text-xl md:text-lg text-md gap-2 text-neutral-400 dark:text-neutral-200 justify-between">
+                  <div className="flex flex-col md:flex-row lg:text-xl md:text-lg text-md gap-2 theme-text  dark:text-neutral-200 justify-between">
                     <a
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ring-1 ring-neutral-500 shadow-md shadow-black rounded-md px-4 py-2 text-center transition-transform duration-200 ease-in-out hover:ring-slate-400 hover:bg-slate-800 
-                        contrast-125  hover:text-neutral-100  active:scale-[0.95]"
+                      className="ring-1 ring-neutral-500 shadow-md shadow-black rounded-md px-4 py-2 text-center  hover:ring-slate-400 dark:hover:bg-slate-800 
+                      transition-transform duration-500 ease-in-out
+                        contrast-125  dark:hover:text-neutral-100  active:scale-[0.95] theme-btn "
                     >
                       Source Code
                     </a>
@@ -127,8 +128,8 @@ const Card = () => {
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="ring-1 ring-neutral-500 shadow-md shadow-black rounded-md px-4 py-2 text-center transition-transform duration-200 ease-in-out hover:ring-slate-400 hover:bg-slate-800 
-                        contrast-125 hover:text-neutral-100 active:scale-[0.95]"
+                        className="ring-1 ring-neutral-500 shadow-md shadow-black rounded-md px-4 py-2 text-center transition-transform duration-200 ease-in-out hover:ring-slate-400 dark:hover:bg-slate-800 
+                        contrast-125 dark:hover:text-neutral-100 active:scale-[0.95] theme-btn"
                       >
                         Live Website
                       </a>

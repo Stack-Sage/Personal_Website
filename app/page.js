@@ -18,8 +18,9 @@ export default function Home() {
   
   return (
     <>
-      <div className="z-10 min-h-screen h-full  bg-black ">
-        <div className=" flex  pt-[100px] lg:pt-[0px] px-10 flex-col bg-gradient-to-b from-[#05011e] via-black to-[#070122]  ">
+      <div className="z-10 min-h-screen h-full   ">
+        <div className=" flex  pt-[100px] lg:pt-[0px] px-10 flex-col dark:bg-gradient-to-b dark:from-[#05011e] dark:via-black dark:to-[#070122] theme-bg
+ ">
           <div className="w-full  ">
             <AnimatedWrapper2>
          

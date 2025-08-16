@@ -18,9 +18,9 @@ const Hero = () => {
 
   return (
 
-    <div className="flex justify-around md:flex-row flex-col lg:flex-row  lg:w-full max-w-screen gap-10 ">
+    <div className="flex justify-around md:flex-row flex-col lg:flex-row  lg:w-full max-w-screen text-blue-950 gap-10 ">
 
-    <div className="relative w-fit min-h-fit lg:mt-10 md:mt-10 flex flex-col lg:flex-col -mt-28 items-center justify-center text-center gap-10 px-6 lg:px-20 text-white overflow-hidden">
+    <div className="relative w-fit min-h-fit lg:mt-10 md:mt-10 flex flex-col lg:flex-col -mt-28 items-center justify-center text-center gap-10 px-6 lg:px-20 text-blue-950 overflow-hidden">
       {/* Image Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -31,7 +31,7 @@ const Hero = () => {
         <img
           src="/images/bg-removed.png"
           alt="Hero Visual"
-          className="w-full rounded-full object-top shadow-2xl contrast-125 brightness-110 transition-all duration-500 transform hover:scale-110 hover:rotate-1 -rotate-3 hover:shadow-3xl cursor-pointer"
+          className="w-full rounded-full object-top  contrast-125 brightness-110 transition-all duration-500 transform hover:scale-110 hover:rotate-1 -rotate-3  cursor-pointer"
           />
       </motion.div>
 
@@ -43,7 +43,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="flex flex-col justify-center items-center  space-y-6 max-w-xl"
         >
-          <h1 className="lg:text-5xl text-3xl md:text-4xl font-extrabold tracking-wide text-neutral-200">
+          <h1 className="lg:text-5xl text-3xl md:text-4xl font-extrabold tracking-wide dark:text-neutral-200">
             Hi, I'm Adarsh
           </h1>
 
@@ -51,20 +51,20 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col md:flex-row items-center justify-center text-2xl md:text-3xl lg:text-4xl font-semibold gap-2 text-neutral-200 "
+            className="flex flex-col md:flex-row items-center justify-center text-2xl md:text-3xl lg:text-4xl font-semibold gap-2 dark:text-neutral-200 "
           >
             I Develop
             <span className=" flex font-bold lg:text-4xl md:text-4xl    text-3xl">
               <FlipWords words={words} />
             </span>
-            <span className="text-neutral-300">Websites...</span>
+            <span className="dark:text-neutral-300">Websites...</span>
           </motion.h2>
 
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-lg lg:text-2xl md:text-xl text-cyan-300 italic"
+            className="text-lg lg:text-2xl md:text-xl dark:text-cyan-300 italic"
             >
             <Cover>
               Build amazing websites  at warp speed
@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 mt-2">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/samples">
-                <button className="px-6 cursor-pointer py-3 bg-cyan-500 text-black font-bold rounded-full shadow-lg hover:bg-cyan-400 transition-all text-lg">
+                <button className="px-6 cursor-pointer py-3 dark:bg-cyan-500 text-black font-bold rounded-full shadow-sm shadow-cyan-500 hover:bg-cyan-400 transition-all text-lg">
                   View Projects
                 </button>
               </Link>
@@ -83,8 +83,8 @@ const Hero = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/contact">
                 <button
-                  className="px-6 py-3 border cursor-pointer border-gray-600 rounded-full text-white font-bold 
-                     bg-slate-950 hover:contrast-125 text-lg transition-all"
+                  className="px-6 py-3 border cursor-pointer border-gray-600 rounded-full dark:text-black font-bold 
+                      invert text-white dark:bg-slate-50 hover:contrast-125 text-lg transition-all"
                 >
                   Contact Me
                 </button>

@@ -1,26 +1,25 @@
 "use client";
 import { cn } from "../../utils/cn";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
 import { useState } from "react";
 
-export const HoverEffect = ({ items, className }) => {
+export const HoverEffect = ({ items, className, onItemClick }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 ", className)}>
+    <div className={cn("grid bg-transparent w-fit grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-28  lg:py-52 md:py-32 px-10 lg:px-44  ", className)}>
       {items.map((item, idx) => (
-        <Link
-          href={item?.link ?? "#"}   // ✅ fallback if no link
+        <button
           key={item?.title ?? idx}
-          className="relative group block p-1 h-full w-full"
+          onClick={() => onItemClick(item.title)}
+          className="relative group block p-[4px] h-full w-full text-left"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-teal-600 block rounded-3xl"
+                className="absolute inset-0 h-full w-full dark:bg-cyan-500  block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.15 } }}
@@ -28,12 +27,11 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </Link>
+        </button>
       ))}
     </div>
   );
@@ -43,11 +41,11 @@ export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-3xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20  transition-transform duration-500 ease-out",
+        "  item-card theme-card theme-text  rounded-3xl h-full p-4 overflow-hidden dark:bg-black  border border-neutral-700 dark:border-white/[0.3] dark:group-hover:border-slate-700 relative z-20 hover:scale-[1.01] transition-transform duration-500 ease-out cursor-pointer" ,
         className
       )}
     >
-      <div className="relative z-50">
+      <div className="relative z-0">
         <div className="p-4">{children}</div>
       </div>
     </div>
@@ -56,7 +54,7 @@ export const Card = ({ className, children }) => {
 
 export const CardTitle = ({ className, children }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold text-lg tracking-wide mt-3", className)}>
+    <h4 className={cn("dark:text-zinc-100 theme-text font-bold text-lg tracking-wide mt-3", className)}>
       {children}
     </h4>
   );
@@ -64,7 +62,7 @@ export const CardTitle = ({ className, children }) => {
 
 export const CardDescription = ({ className, children }) => {
   return (
-    <p className={cn("mt-5 text-zinc-400 tracking-wide leading-relaxed text-md", className)}>
+    <p className={cn("mt-5 dark:text-zinc-400 tracking-wide leading-relaxed text-md", className)}>
       {children}
     </p>
   );

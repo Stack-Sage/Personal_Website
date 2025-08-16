@@ -7,10 +7,11 @@ import ContactForm from '../components/contactCom/ContactForm'
 
 const Contact = () => {
   return (
-    <div className="relative w-full min-h-screen bg-black overflow-hidden">
+    <div className="relative w-full min-h-screen dark:bg-gradient-to-br dark:from-blue-950 via-black to-blue-950
+     overflow-hidden  ">
       
       {/* Globe Background */}
-      <div className="absolute lg:top-52  left-0 -top-28 items-center justify-center  lg:left-4/12  w-full lg:h-fit lg:z-30   z-20 hover:invert hover:contrast-200 hover:brightness-200 hover:saturate-200 hover:hue-rotate-180   
+      <div className="absolute lg:top-52  left-0 -top-28 items-center justify-center dark:invert lg:left-4/12  w-full lg:h-fit lg:z-30   z-20 dark:-hue-rotate-180 saturate-100 hover:saturate-150  contrast-100 hover:contrast-150 hover:hue-rotate-180  
   transition-[transform,filter] duration-1000 delay-100 ease-in-out  lg:w-fit ">
         <GlobeDemo />
       </div>

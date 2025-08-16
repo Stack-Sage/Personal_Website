@@ -8,41 +8,36 @@ export function CardHoverEffectDemo() {
     </div>)
   );
 }
+
 export const projects = [
   {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+    title: "3D Portfolio Websites",
+    description: "Interactive 3D websites with smooth animations to showcase your work or business.",
+    serviceName: "3D Portfolio Websites"
   },
   {
-    title: "Netflix",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+    title: "Responsive React.js Websites",
+    description: "Modern, fast, and mobile-friendly websites built with React.js and Tailwind CSS.",
+    serviceName: "Responsive React.js Websites"
   },
   {
-    title: "Google",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+    title: "FullStack MERN Applications",
+    description: "Complete apps with MongoDB, Express, React, Node.js — including auth, DB & dashboards.",
+    serviceName: "FullStack MERN Applications"
   },
   {
-    title: "Meta",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+    title: "AI & ML Web Integration",
+    description: "Add ML/DL features to apps for predictions, analytics, or smart tools.",
+    serviceName: "AI & ML Web Integration"
   },
   {
-    title: "Amazon",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+    title: "Collaborate on Your Web Project",
+    description: "Pair up and build your project together with hands-on guidance.",
+    serviceName: "Collaboration"
   },
   {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
-  },
+    title: "Chess Coaching & Analysis",
+    description: "Personalized coaching from a 2000+ rated rapid player. Improve strategy & tactics.",
+    serviceName: "Chess Coaching"
+  }
 ];
