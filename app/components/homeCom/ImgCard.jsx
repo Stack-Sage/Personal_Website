@@ -7,7 +7,7 @@ const skills = [
   { title: 'React.js', description: 'Building interactive UIs with reusable components.', icon: <FaReact /> },
   { title: 'Python', description: 'Efficient scripting, automation, and backend logic.', icon: <FaPython /> },
   { title: 'JavaScript', description: 'The language of the web — DOM, async, and more.', icon: <FaJs /> },
-  { title: 'Chess', description: 'Strategy, tactics, and 1900 elo brain flexing.', icon: <FaChess /> },
+  { title: 'Node JS', description: 'Backend Technologies including Express,Node, Mongo DB', icon: <FaChess /> },
 ];
 
 // Motion variants for container (staggered children)

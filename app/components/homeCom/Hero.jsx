@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Card from "./Cube";
+import Card2 from './Cube2'
 
 const Hero = () => {
   const [showContent, setShowContent] = useState(false);
@@ -18,9 +19,9 @@ const Hero = () => {
 
   return (
 
-    <div className="flex justify-around md:flex-row flex-col lg:flex-row  lg:w-full max-w-screen text-blue-950 gap-10 ">
+    <div className="flex justify-around md:flex-row flex-col lg:flex-row  lg:w-full max-w-screen min-w-[100vw] text-blue-950  ">
 
-    <div className="relative w-fit min-h-fit lg:mt-10 md:mt-10 flex flex-col lg:flex-col -mt-28 items-center justify-center text-center gap-10 px-6 lg:px-20 text-blue-950 overflow-hidden">
+    <div className="relative max-w-screen min-h-screen lg:mt-10 md:mt-10 flex flex-col lg:flex-col -mt-56 items-center justify-center text-center gap-10  mx-6 lg:px-20 text-blue-950 overflow-hidden">
       {/* Image Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -51,10 +52,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col md:flex-row items-center justify-center text-2xl md:text-3xl lg:text-4xl font-semibold gap-2 dark:text-neutral-200 "
+            className="flex flex-row md:flex-row items-center justify-center text-2xl md:text-3xl lg:text-4xl font-semibold gap-2 dark:text-neutral-200 "
           >
             I Develop
-            <span className=" flex font-bold lg:text-4xl md:text-4xl    text-3xl">
+            <span className=" flex font-bold flex-row lg:text-4xl md:text-4xl    text-3xl">
               <FlipWords words={words} />
             </span>
             <span className="dark:text-neutral-300">Websites...</span>
@@ -123,8 +124,9 @@ const Hero = () => {
 
     </div>
         {/* Card Section */}
-      <div className="flex items-center justify-center mt-10 lg:mt-0 md:mt-0 lg:scale-125 md:scale-90 scale-80 fade-up">
+      <div className="flex items-center justify-center mt-32 lg:mt-0 md:mt-0 lg:scale-105 flex-col lg:gap-28 gap-36 md:scale-90 scale-[0.8] fade-up">
         <Card />
+        <Card2 />
       </div>
       </div>
   );

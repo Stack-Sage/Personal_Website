@@ -2,26 +2,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = () => {
+const Card2 = () => {
   return (
     <StyledWrapper>
-      <div className="cube-container hover:brightness-125 hover:-hue-rotate-60 dark:hover:hue-rotate-180 text-black  transition-transform duration-500  ease-out hover:duration-500  hover:invert ">
-        <div className="cube ">
-          <div className="face front "><span>FrontEnd</span></div>
-          <div className="face back">React JS</div>
+      <div className="cube-container hover:brightness-125 hover:contrast-125 hover:invert hover:hue-rotate-90 dark:-hue-rotate-90 transition-transform duration-500 ease-out hover:duration-500 ">
+        <div className="cube">
+          <div className="face front "><span>Backend </span></div>
+          <div className="face back">Node JS</div>
           <div className="face right">Next JS</div>
-          <div className="face left">Tailwind CSS</div>
-          <div className="face top">Vite</div>
-          <div className="face bottom">JavaScript</div>
+          <div className="face left">Express JS</div>
+          <div className="face top">Mongo DB</div>
+          <div className="face bottom"></div>
         </div>
       
         {/* Tooltips */}
-        <div className="tooltip tooltip-front">Framer-Motion </div>
-        <div className="tooltip tooltip-back">Three JS</div>
-        <div className="tooltip tooltip-right">Redux</div>
-        <div className="tooltip tooltip-left">Axios</div>
-        <div className="tooltip tooltip-top">React JS</div>
-        <div className="tooltip tooltip-bottom">Git & GitHub</div>
+        <div className="tooltip tooltip-front">Cloudinary</div>
+        <div className="tooltip tooltip-back">Mongoose</div>
+        <div className="tooltip tooltip-right">Bcrypt</div>
+        <div className="tooltip tooltip-left">JWT</div>
+        <div className="tooltip tooltip-top">Node JS</div>
+        <div className="tooltip tooltip-bottom">Python</div>
       </div>
     </StyledWrapper>
   );
@@ -96,20 +96,13 @@ const StyledWrapper = styled.div`
    
   }
 
-
-
-/* Light pastel gradients (invert → dark, bold indigo/blue/violet) */
+  /* Light pastel gradients (invert → dark, bold indigo/blue/violet) */
 .tooltip-front   { background: linear-gradient(135deg, #f5f3ff, #e0e7ff); }  /* very pale violet → light indigo */
 .tooltip-back    { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); }  /* lavender mist → lilac */
 .tooltip-right   { background: linear-gradient(135deg, #eff6ff, #dbeafe); }  /* baby blue → pale blue */
 .tooltip-left    { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }  /* faint violet → lavender */
 .tooltip-top     { background: linear-gradient(135deg, #f0f9ff, #e0f2fe); }  /* icy blue → soft sky */
 .tooltip-bottom  { background: linear-gradient(135deg, #faf5ff, #f3e8ff); }  /* pale pinkish violet → soft purple */
-
-
-
-
-
 
   /* Positioning + lines */
   .tooltip-front {
@@ -209,4 +202,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Card;
+export default Card2;
